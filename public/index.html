@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title>CelebScope — Global Celebrity Gossip Hub</title>
+	<meta name="description" content="Celebrity gossips from all countries. Explore trending stories, search by name, and filter by country." />
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+	<link rel="stylesheet" href="./assets/css/styles.css" />
+	<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 128 128'><text y='1em' font-size='96'>🌟</text></svg>">
+</head>
+<body>
+	<header class="site-header">
+		<div class="container header-inner">
+			<a class="brand" href="/index.html" aria-label="CelebScope Home">
+				<span class="logo">🌟</span>
+				<span class="brand-name">CelebScope</span>
+			</a>
+			<div class="header-actions">
+				<div class="search">
+					<input id="searchInput" type="search" placeholder="Search celebrities, tags..." autocomplete="off" />
+				</div>
+				<div class="filter">
+					<select id="countryFilter" aria-label="Filter by country">
+						<option value="">All countries</option>
+					</select>
+				</div>
+				<button id="themeToggle" class="theme-toggle" aria-label="Toggle dark mode">☾</button>
+			</div>
+		</div>
+	</header>
+
+	<main class="container">
+		<section class="hero">
+			<h1>Global Celebrity Gossip</h1>
+			<p>Fresh celebrity buzz from around the world. Discover trending stories or search by name.</p>
+		</section>
+
+		<section class="trending" aria-labelledby="trendingHeading">
+			<div class="section-head">
+				<h2 id="trendingHeading">Trending tags</h2>
+				<div id="trendingTags" class="tags"></div>
+			</div>
+		</section>
+
+		<section class="results" aria-labelledby="resultsHeading">
+			<div class="section-head">
+				<h2 id="resultsHeading">Latest stories</h2>
+				<div class="sort-controls">
+					<label>
+						Sort by
+						<select id="sortSelect">
+							<option value="date_desc">Newest</option>
+							<option value="date_asc">Oldest</option>
+							<option value="title_asc">Title A–Z</option>
+						</select>
+					</label>
+				</div>
+			</div>
+			<div id="resultsGrid" class="grid"></div>
+		</section>
+	</main>
+
+	<footer class="site-footer">
+		<div class="container footer-inner">
+			<p>© <span id="year"></span> CelebScope. Entertainment content only; see guidelines in README.</p>
+		</div>
+	</footer>
+
+	<script src="./assets/js/data.js"></script>
+	<script src="./assets/js/utils.js"></script>
+	<script src="./assets/js/render.js"></script>
+	<script src="./assets/js/theme.js"></script>
+	<script src="./assets/js/app.js"></script>
+</body>
+</html>
+
